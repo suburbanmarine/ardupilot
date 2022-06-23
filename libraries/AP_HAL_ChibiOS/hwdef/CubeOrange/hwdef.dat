@@ -72,8 +72,8 @@ PA15 TIM2_CH1 TIM2 GPIO(77) ALARM
 
 # This defines a couple of general purpose outputs, mapped to GPIO
 # numbers 1 and 2 for users.
-PB0 EXTERN_GPIO1 OUTPUT GPIO(1)
-PB1 EXTERN_GPIO2 OUTPUT GPIO(2)
+PB0 EXTERN_GPIO1 OUTPUT HIGH OPENDRAIN GPIO(1)
+PB1 EXTERN_GPIO2 OUTPUT HIGH OPENDRAIN GPIO(2)
 
 # This defines some input pins, currently unused.
 PB2 BOOT1 INPUT
