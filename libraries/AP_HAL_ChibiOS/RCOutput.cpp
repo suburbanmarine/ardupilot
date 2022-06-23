@@ -109,6 +109,9 @@ void RCOutput::init()
     hal.gpio->pinMode(57, 1);
 #endif
 
+    // Enable sculpin output buffers
+    palWriteLine(HAL_GPIO_PIN_EXTERN_GPIO1, 0);
+
     hal.scheduler->register_timer_process(FUNCTOR_BIND(this, &RCOutput::safety_update, void));
     _initialised = true;
 }

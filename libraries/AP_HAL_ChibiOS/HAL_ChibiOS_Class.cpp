@@ -253,24 +253,24 @@ static void main_loop()
      */
     chThdSetPriority(APM_MAIN_PRIORITY);
 
-    const systime_t t0 = chVTGetSystemTimeX();
-    bool gpio_low = false;
+    // const systime_t t0 = chVTGetSystemTimeX();
+    // bool gpio_low = false;
 
     while (true) {
         g_callbacks->loop();
 
-        if( ! gpio_low )
-        {
-            systime_t dt = chVTTimeElapsedSinceX(t0);
+        // if( ! gpio_low )
+        // {
+        //     systime_t dt = chVTTimeElapsedSinceX(t0);
 
-            if(chTimeI2MS(dt) > 10000)
-            {
-                // Enable sculpin output buffers
-                palWriteLine(HAL_GPIO_PIN_EXTERN_GPIO1, 0);
+        //     if(chTimeI2MS(dt) > 10000)
+        //     {
+        //         // Enable sculpin output buffers
+        //         palWriteLine(HAL_GPIO_PIN_EXTERN_GPIO1, 0);
 
-                gpio_low = true;
-            }
-        }
+        //         gpio_low = true;
+        //     }
+        // }
 
         /*
           give up 50 microseconds of time if the INS loop hasn't
