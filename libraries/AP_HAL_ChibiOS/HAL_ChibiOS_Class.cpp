@@ -245,6 +245,9 @@ static void main_loop()
 
     hal.scheduler->set_system_initialized();
 
+    // Enable sculpin output buffers
+    palWriteLine(HAL_GPIO_PIN_EXTERN_GPIO1, 0);
+
     thread_running = true;
     chRegSetThreadName(SKETCHNAME);
 
