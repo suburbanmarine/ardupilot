@@ -245,9 +245,6 @@ static void main_loop()
 
     hal.scheduler->set_system_initialized();
 
-    // Enable sculpin output buffers
-    palWriteLine(HAL_GPIO_PIN_EXTERN_GPIO1, 0);
-
     thread_running = true;
     chRegSetThreadName(SKETCHNAME);
 
@@ -255,6 +252,17 @@ static void main_loop()
       switch to high priority for main loop
      */
     chThdSetPriority(APM_MAIN_PRIORITY);
+
+    {
+        //wait for fun
+        for(size_t i = 0; i < 10000; i++)
+        {
+            hal.scheduler->delay_microseconds(100);
+        }
+
+        // Enable sculpin output buffers
+        palWriteLine(HAL_GPIO_PIN_EXTERN_GPIO1, 0);
+    }
 
     while (true) {
         g_callbacks->loop();
