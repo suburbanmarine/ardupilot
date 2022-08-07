@@ -176,8 +176,40 @@ void AP_Motors6DOF::setup_motors(motor_frame_class frame_class, motor_frame_type
         break;
 
     case SUB_FRAME_CUSTOM:
+    {
+
+    //                 Motor #              Roll Factor     Pitch Factor    Yaw Factor      Throttle Factor     Forward Factor      Lateral Factor  Testing Order
+        _frame_class_string = "SCULPIN";
+        const float sqrt2_over_2 = sqrtf(2.0f) / 2.0f;
+
+        // view from top
+        //first row
+        // 2 1
+        // 3 4
+        //second row
+        // 6 5
+        // 7 8
+
+        // 1: in, up
+        // 2: in, up
+        // 3: in, up
+        // 4: in, up
+        // 5: in, down
+        // 6: in, down
+        // 7: in, down
+        // 8: in, down
+
+        add_motor_raw_6dof(AP_MOTORS_MOT_1,      1.0f,          0.0f,              0.0f,           1.0f,              -1.0f,          1.0f,       1);
+        add_motor_raw_6dof(AP_MOTORS_MOT_2,      1.0f,          0.0f,              0.0f,           1.0f,              -1.0f,          1.0f,      2);
+        add_motor_raw_6dof(AP_MOTORS_MOT_3,      1.0f,          0.0f,              0.0f,           1.0f,              1.0f,           1.0f,       3);
+        add_motor_raw_6dof(AP_MOTORS_MOT_4,      1.0f,          0.0f,              0.0f,           1.0f,              1.0f,           1.0f,      4);
+        add_motor_raw_6dof(AP_MOTORS_MOT_5,      1.0f,          0.0f,              0.0f,          -1.0f,              0.0,                  0,              5);
+        add_motor_raw_6dof(AP_MOTORS_MOT_6,      1.0f,          0.0f,              0.0f,          -1.0f,              0.0,                  0,              6);
+        add_motor_raw_6dof(AP_MOTORS_MOT_7,      1.0f,          0.0f,              0.0f,          -1.0f,              0.0,                  0,              7);
+        add_motor_raw_6dof(AP_MOTORS_MOT_8,      1.0f,          0.0f,              0.0f,          -1.0f,              0.0,                  0,              8);
         // Put your custom motor setup here
-        //break;
+        break;
+    }
 
     case SUB_FRAME_SIMPLEROV_3:
         _frame_class_string = "SIMPLEROV_3";
