@@ -199,15 +199,14 @@ void AP_Motors6DOF::setup_motors(motor_frame_class frame_class, motor_frame_type
         // 7: in, down
         // 8: in, down
 
-        add_motor_raw_6dof(AP_MOTORS_MOT_1,      sqrt2_over_2,          0.0f,              0.0f,           1.0f,              -1.0f,          1.0f,       1);
-        add_motor_raw_6dof(AP_MOTORS_MOT_2,      sqrt2_over_2,          0.0f,              0.0f,           1.0f,              -1.0f,          1.0f,      2);
-        add_motor_raw_6dof(AP_MOTORS_MOT_3,      sqrt2_over_2,          0.0f,              0.0f,           1.0f,              1.0f,           1.0f,       3);
-        add_motor_raw_6dof(AP_MOTORS_MOT_4,      sqrt2_over_2,          0.0f,              0.0f,           1.0f,              1.0f,           1.0f,      4);
-        add_motor_raw_6dof(AP_MOTORS_MOT_5,      sqrt2_over_2,          0.0f,              0.0f,          -1.0f,              0.0,                  0,              5);
-        add_motor_raw_6dof(AP_MOTORS_MOT_6,      sqrt2_over_2,          0.0f,              0.0f,          -1.0f,              0.0,                  0,              6);
-        add_motor_raw_6dof(AP_MOTORS_MOT_7,      sqrt2_over_2,          0.0f,              0.0f,          -1.0f,              0.0,                  0,              7);
-        add_motor_raw_6dof(AP_MOTORS_MOT_8,      sqrt2_over_2,          0.0f,              0.0f,          -1.0f,              0.0,                  0,              8);
-        // Put your custom motor setup here
+        add_motor_raw_6dof(AP_MOTORS_MOT_1,      sqrt2_over_2,          -sqrt2_over_2f,             sqrt2_over_2f,           sqrt2_over_2f,              sqrt2_over_2f,         -sqrt2_over_2f,     1);
+        add_motor_raw_6dof(AP_MOTORS_MOT_2,      sqrt2_over_2,          sqrt2_over_2f,              sqrt2_over_2f,           -sqrt2_over_2f,             sqrt2_over_2f,          sqrt2_over_2f,     2);
+        add_motor_raw_6dof(AP_MOTORS_MOT_3,      sqrt2_over_2,          -sqrt2_over_2f,             -sqrt2_over_2f,          -sqrt2_over_2f,             sqrt2_over_2f,         -sqrt2_over_2f,     3);
+        add_motor_raw_6dof(AP_MOTORS_MOT_4,      sqrt2_over_2,          sqrt2_over_2f,              -sqrt2_over_2f,          sqrt2_over_2f,              sqrt2_over_2f,          sqrt2_over_2f,     4);
+        add_motor_raw_6dof(AP_MOTORS_MOT_5,      sqrt2_over_2,          sqrt2_over_2f,              -sqrt2_over_2f,          sqrt2_over_2f,              sqrt2_over_2f,         -sqrt2_over_2f,     5);
+        add_motor_raw_6dof(AP_MOTORS_MOT_6,      sqrt2_over_2,          -sqrt2_over_2f,             -sqrt2_over_2f,          -sqrt2_over_2f,             sqrt2_over_2f,          sqrt2_over_2f,     6);
+        add_motor_raw_6dof(AP_MOTORS_MOT_7,      sqrt2_over_2,          sqrt2_over_2f,              sqrt2_over_2f,           -sqrt2_over_2f,             sqrt2_over_2f,         -sqrt2_over_2f,     7);
+        add_motor_raw_6dof(AP_MOTORS_MOT_8,      sqrt2_over_2,          -sqrt2_over_2f,             sqrt2_over_2f,           sqrt2_over_2f,              sqrt2_over_2f,          sqrt2_over_2f,     8);
         break;
     }
 
