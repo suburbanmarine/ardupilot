@@ -5,9 +5,33 @@ BATT_AMP_PERVLT 39.877
 BATT_VOLT_MULT 12.02
 BATT2_AMP_PERVLT 39.877
 BATT2_VOLT_MULT 12.02
-# setup ADSB
-ADSB_TYPE 1
+# disable ADSB
+ADSB_TYPE 0
 SERIAL5_BAUD 57
 SERIAL5_PROTOCOL 1
 # set frame to custom
 FRAME_CONFIG 7
+# set main outputs to be aux
+BRD_PWM_COUNT 0
+# set servo10 as relay
+SERVO10_FUNCTION -1
+# default relay off
+RELAY_DEFAULT 0
+# set second relay as AUXOUT2
+RELAY_PIN2 51
+
+# still need to map buttons to relay 2 toggle
+# 54 - relay_2_on
+# 55 - relay_2_off
+# 56 - relay_2_toggle
+BTN0_FUNCTION 56
+
+# still need to map buttons to light bright
+# 31 - lights1_cycle
+# 32 - lights1_brighter
+# 33 - lights1_dimmer
+BTN1_FUNCTION 32
+# still need to map buttons to light dim
+BTN2_FUNCTION 33
+
+# still need to map light output
