@@ -11,8 +11,8 @@ SERIAL5_BAUD 57
 SERIAL5_PROTOCOL 1
 # set frame to custom
 FRAME_CONFIG 7
-# set main outputs to be aux
-BRD_PWM_COUNT 0
+# set main output 1 to be pwm for light, rest aux
+BRD_PWM_COUNT 1
 # set servo10 as relay
 SERVO10_FUNCTION -1
 # default relay off
@@ -24,14 +24,14 @@ RELAY_PIN2 51
 # 54 - relay_2_on
 # 55 - relay_2_off
 # 56 - relay_2_toggle
-BTN0_FUNCTION 56
+BTN3_FUNCTION 56
 
 # still need to map buttons to light bright
 # 31 - lights1_cycle
 # 32 - lights1_brighter
 # 33 - lights1_dimmer
-BTN1_FUNCTION 32
+BTN2_FUNCTION 32
 # still need to map buttons to light dim
-BTN2_FUNCTION 33
+BTN1_FUNCTION 33
 
 # still need to map light output
