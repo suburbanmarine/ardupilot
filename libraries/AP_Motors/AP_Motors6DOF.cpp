@@ -199,14 +199,14 @@ void AP_Motors6DOF::setup_motors(motor_frame_class frame_class, motor_frame_type
         // 8: in, down
 
         //                 Motor #               Roll Factor           Pitch Factor             Yaw Factor             Throttle Factor  Forward Factor         Lateral Factor     Testing Order
-        add_motor_raw_6dof(AP_MOTORS_MOT_1,      sqrt2_over_2,         sqrt2_over_2,             sqrt2_over_2,         -1.0f,             sqrt2_over_2,         sqrt2_over_2,      1);
-        add_motor_raw_6dof(AP_MOTORS_MOT_2,      sqrt2_over_2,         -sqrt2_over_2,            -sqrt2_over_2,        -1.0f,            -sqrt2_over_2,        sqrt2_over_2,     2);
-        add_motor_raw_6dof(AP_MOTORS_MOT_3,      -sqrt2_over_2,        -sqrt2_over_2,            -sqrt2_over_2,        -1.0f,            -sqrt2_over_2,        sqrt2_over_2,     3);
-        add_motor_raw_6dof(AP_MOTORS_MOT_4,      -sqrt2_over_2,        sqrt2_over_2,             sqrt2_over_2,         -1.0f,             sqrt2_over_2,         sqrt2_over_2,      4);
-        add_motor_raw_6dof(AP_MOTORS_MOT_5,      sqrt2_over_2,         sqrt2_over_2,             -sqrt2_over_2,        1.0f,             sqrt2_over_2,         -sqrt2_over_2,      5);
-        add_motor_raw_6dof(AP_MOTORS_MOT_6,      sqrt2_over_2,         -sqrt2_over_2,            sqrt2_over_2,         1.0f,            -sqrt2_over_2,        -sqrt2_over_2,     6);
-        add_motor_raw_6dof(AP_MOTORS_MOT_7,      -sqrt2_over_2,        -sqrt2_over_2,            sqrt2_over_2,         1.0f,            -sqrt2_over_2,        -sqrt2_over_2,     7);
-        add_motor_raw_6dof(AP_MOTORS_MOT_8,      -sqrt2_over_2,        sqrt2_over_2,             -sqrt2_over_2,        1.0f,             sqrt2_over_2,         -sqrt2_over_2,      8);
+        add_motor_raw_6dof(AP_MOTORS_MOT_1,      sqrt2_over_2,         sqrt2_over_2,             sqrt2_over_2,         -1.0f,           -sqrt2_over_2,         sqrt2_over_2,      1);
+        add_motor_raw_6dof(AP_MOTORS_MOT_2,      sqrt2_over_2,         -sqrt2_over_2,            -sqrt2_over_2,        -1.0f,           sqrt2_over_2,        sqrt2_over_2,     2);
+        add_motor_raw_6dof(AP_MOTORS_MOT_3,      -sqrt2_over_2,        -sqrt2_over_2,            -sqrt2_over_2,        1.0f,            sqrt2_over_2,        sqrt2_over_2,     3);
+        add_motor_raw_6dof(AP_MOTORS_MOT_4,      -sqrt2_over_2,        sqrt2_over_2,             sqrt2_over_2,         1.0f,            -sqrt2_over_2,         sqrt2_over_2,      4);
+        add_motor_raw_6dof(AP_MOTORS_MOT_5,      sqrt2_over_2,         sqrt2_over_2,             -sqrt2_over_2,        1.0f,            -sqrt2_over_2,         -sqrt2_over_2,      5);
+        add_motor_raw_6dof(AP_MOTORS_MOT_6,      sqrt2_over_2,         -sqrt2_over_2,            sqrt2_over_2,         1.0f,            sqrt2_over_2,        -sqrt2_over_2,     6);
+        add_motor_raw_6dof(AP_MOTORS_MOT_7,      -sqrt2_over_2,        -sqrt2_over_2,            sqrt2_over_2,         -1.0f,           sqrt2_over_2,        -sqrt2_over_2,     7);
+        add_motor_raw_6dof(AP_MOTORS_MOT_8,      -sqrt2_over_2,        sqrt2_over_2,             -sqrt2_over_2,        -1.0f,           -sqrt2_over_2,         -sqrt2_over_2,      8);
         break;
     }
 
