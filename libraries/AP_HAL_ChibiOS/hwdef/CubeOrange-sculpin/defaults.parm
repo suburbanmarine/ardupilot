@@ -35,3 +35,6 @@ BTN2_FUNCTION 32
 BTN1_FUNCTION 33
 
 # still need to map light output
+
+# oriengation
+# AHRS_ORIENTATION Roll270Pitch90
